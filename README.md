@@ -19,4 +19,4 @@ curl -LO https://gist.githubusercontent.com/sponte/a283cc1fbcf1ba4797ed/raw/bddf
 vagrant up
 ```
 
-After it's been deployed, go to http://localhost:4765/ to verify the results
+After it's been deployed, go to http://localhost:4765/ and login with ```administrator/test```
