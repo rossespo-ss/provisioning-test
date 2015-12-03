@@ -15,6 +15,7 @@ Clone the repo and run ```vagrant up```:
 ```bash
 git clone https://github.com/sponte/provisioning-test
 cd provisioning-test
+curl -LO https://gist.githubusercontent.com/sponte/a283cc1fbcf1ba4797ed/raw/bddf6d54d7a51e44e5151ded22b9635e45e2e0da/.secret
 vagrant up
 ```
 
