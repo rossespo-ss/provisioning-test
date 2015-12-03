@@ -1,0 +1,15 @@
+{
+  "id": "vagrant",
+  "password": {
+    "encrypted_data": "6Dn9tFFJXQB2CG+NF1Dz8hI8OAEvNZzysoArCKT+mtA=\n",
+    "iv": "7m05nLk5eN3/j/rxaGS4tQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "roles": {
+    "encrypted_data": "9GQoZkBZ9iCQyMxxRc1GO65sCGjuQRpwgSTSL7JfQikeaduN/+NQHKjUXchV\n2+vv\n",
+    "iv": "tQtQOKK0bTwVEgw5EzD55Q==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
