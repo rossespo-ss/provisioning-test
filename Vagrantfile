@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
       vb.gui = false
     
       # Customize the amount of memory on the VM:
-      vb.memory = "512"
+      vb.memory = "2048"
     end
 
     web.vm.synced_folder "data", "/vagrant_data"
