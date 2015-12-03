@@ -1,2 +1,4 @@
+.secret
+.vagrant
 .kitchen/
 .kitchen.local.yml
