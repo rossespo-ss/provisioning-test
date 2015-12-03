@@ -5,6 +5,7 @@
 * VirtualBox https://www.virtualbox.org/
 * Vagrant https://docs.vagrantup.com/v2/installation/
 * Chef https://downloads.chef.io/chef-client
+* Vagrant Berkshelf plugin - install using ```vagrant plugin install vagrant-berkshelf```
 
 
 ## How to use it
