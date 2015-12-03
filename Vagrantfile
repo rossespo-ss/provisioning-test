@@ -28,6 +28,18 @@ Vagrant.configure(2) do |config|
       chef.encrypted_data_bag_secret_key_path = '.secret'
       chef.data_bags_path = 'data_bags'
       chef.add_recipe "teamcity::server"
+
+      chef.json = {
+        "java" => {
+          "jdk_version" => 7,
+          "oracle" => {
+            "accept_oracle_download_terms" => true
+          }
+        },
+        "tomcat" => {
+          "base_version" => 7
+        }
+      }
     end
 
     # Enable provisioning with a shell script. Additional provisioners such as
@@ -39,26 +51,26 @@ Vagrant.configure(2) do |config|
     # SHELL
   end
 
-  config.vm.define "db", primary: true do |db|
-    db.vm.box = "ubuntu/trusty64"
-    db.vm.network "private_network", ip: "192.168.33.20"
+  # config.vm.define "db", primary: true do |db|
+  #   db.vm.box = "ubuntu/trusty64"
+  #   db.vm.network "private_network", ip: "192.168.33.20"
     
-    db.vm.provider "virtualbox" do |vb|
-      # Display the VirtualBox GUI when booting the machine
-      vb.gui = false
+  #   db.vm.provider "virtualbox" do |vb|
+  #     # Display the VirtualBox GUI when booting the machine
+  #     vb.gui = false
     
-      # Customize the amount of memory on the VM:
-      vb.memory = "2048"
-    end
+  #     # Customize the amount of memory on the VM:
+  #     vb.memory = "2048"
+  #   end
 
-    db.vm.synced_folder "data", "/vagrant_data"
+  #   db.vm.synced_folder "data", "/vagrant_data"
 
-    # Enable provisioning with a shell script. Additional provisioners such as
-    # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-    # documentation for more information about their specific syntax and use.
-    # config.vm.provision "shell", inline: <<-SHELL
-    #   sudo apt-get update
-    #   sudo apt-get install -y apache2
-    # SHELL
-  end
+  #   # Enable provisioning with a shell script. Additional provisioners such as
+  #   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
+  #   # documentation for more information about their specific syntax and use.
+  #   # config.vm.provision "shell", inline: <<-SHELL
+  #   #   sudo apt-get update
+  #   #   sudo apt-get install -y apache2
+  #   # SHELL
+  # end
 end
